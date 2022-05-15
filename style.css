@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("ctf_img.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: #334257;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    
+}
+
+h1 {
+    padding-top: 100px;
+    margin-bottom: 50px;
+    color: #F2F2F2;
+    font-size: 5rem;
+    font-weight: 900;
+    text-shadow: 3px 5px 4px #14279B;
+
+}
+
+
+.btn {
+    border-radius: 50px;
+    text-shadow: 1px 1px 1px #1c1b1b;
+    font-size: 1.5rem;
+    font-weight: 800;
+    background: #dedcdb;
+    padding: 10px 30px 10px 30px;
+    text-decoration: none;
+    border: none;
+    color: #125D98;
+}
+
+
+
+.btn-container {
+    margin: 10px 10px;
+    padding-left: 10px;
+}
+
+
+
+.submit-btn button{
+    margin-top: 50px;
+    padding: 15px 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: #dedcdb;
+    border: none;
+    border-radius: 50px;
+    color: #14279B;
+    text-shadow: 1px 1px 1px #1c1b1b;
+}
+
+a {
+    color: #14279B;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #dedcdb;
+}
+
+button:hover {
+    color: #dedcdb;
+    background-color: #125D98;
+}
+
+
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+} 
+

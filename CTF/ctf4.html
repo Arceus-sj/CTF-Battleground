@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF - 4</title>
+
+
+    <style>
+        body {
+            background-color: rgb(47, 46, 46);
+            text-align: center;
+        }
+
+        .text {
+            color: rgb(228, 240, 251);
+        }
+
+        canvas {
+            border: 1px solid #d3d3d3;
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body onload="startGame()">
+    <script>
+
+        var _0x5b8dd4 = _0x4dc0; (function (_0x2ccd66, _0x3261e2) { var _0x392550 = _0x4dc0, _0x5677bb = _0x2ccd66(); while (!![]) { try { var _0x2018de = parseInt(_0x392550(0xcb)) / 0x1 * (parseInt(_0x392550(0xd3)) / 0x2) + -parseInt(_0x392550(0xc3)) / 0x3 * (parseInt(_0x392550(0xe4)) / 0x4) + -parseInt(_0x392550(0xd6)) / 0x5 * (-parseInt(_0x392550(0xe5)) / 0x6) + -parseInt(_0x392550(0xdd)) / 0x7 * (parseInt(_0x392550(0xce)) / 0x8) + -parseInt(_0x392550(0xc1)) / 0x9 * (-parseInt(_0x392550(0xbf)) / 0xa) + parseInt(_0x392550(0xd0)) / 0xb + -parseInt(_0x392550(0xc9)) / 0xc * (parseInt(_0x392550(0xdf)) / 0xd); if (_0x2018de === _0x3261e2) break; else _0x5677bb['push'](_0x5677bb['shift']()); } catch (_0x21f712) { _0x5677bb['push'](_0x5677bb['shift']()); } } }(_0x19dd, 0x63cf3)); var myGamePiece, myObstacles = [], myScore; function startGame() { var _0x3d97c0 = _0x4dc0; myGamePiece = new component(0x1e, 0x1e, _0x3d97c0(0xe2), 0xa, 0x78), myGamePiece[_0x3d97c0(0xc0)] = 0.05, myScore = new component(_0x3d97c0(0xd8), 'Consolas', 'black', 0x118, 0x28, 'text'), myGameArea['start'](); } function _0x4dc0(_0x3fb754, _0x2ecf9b) { var _0x19dd9c = _0x19dd(); return _0x4dc0 = function (_0x4dc01c, _0x1a86d2) { _0x4dc01c = _0x4dc01c - 0xbc; var _0x51331e = _0x19dd9c[_0x4dc01c]; return _0x51331e; }, _0x4dc0(_0x3fb754, _0x2ecf9b); } var myGameArea = { 'canvas': document[_0x5b8dd4(0xe6)](_0x5b8dd4(0xca)), 'start': function () { var _0x53a071 = _0x5b8dd4; this['canvas']['width'] = 0x1e0, this[_0x53a071(0xca)]['height'] = 0x10e, this[_0x53a071(0xda)] = this['canvas']['getContext']('2d'), document['body'][_0x53a071(0xd5)](this[_0x53a071(0xca)], document[_0x53a071(0xbe)][_0x53a071(0xd1)][0x0]), this['frameNo'] = 0x0, this[_0x53a071(0xdb)] = setInterval(updateGameArea, 0x14); }, 'clear': function () { var _0x6d95a4 = _0x5b8dd4; this[_0x6d95a4(0xda)][_0x6d95a4(0xd4)](0x0, 0x0, this[_0x6d95a4(0xca)][_0x6d95a4(0xea)], this[_0x6d95a4(0xca)][_0x6d95a4(0xbc)]); } }; function component(_0x7828ac, _0x35e825, _0x4a3ce7, _0x22675d, _0x3a2220, _0x3aef4b) { var _0x1e43d7 = _0x5b8dd4; this[_0x1e43d7(0xc7)] = _0x3aef4b, this[_0x1e43d7(0xcf)] = 0x0, this[_0x1e43d7(0xea)] = _0x7828ac, this[_0x1e43d7(0xbc)] = _0x35e825, this[_0x1e43d7(0xc8)] = 0x0, this[_0x1e43d7(0xd9)] = 0x0, this['x'] = _0x22675d, this['y'] = _0x3a2220, this[_0x1e43d7(0xc0)] = 0x0, this['gravitySpeed'] = 0x0, this['update'] = function () { var _0x11afa7 = _0x1e43d7; ctx = myGameArea['context'], this[_0x11afa7(0xc7)] == 'text' ? (ctx[_0x11afa7(0xc2)] = this[_0x11afa7(0xea)] + '\x20' + this[_0x11afa7(0xbc)], ctx[_0x11afa7(0xde)] = _0x4a3ce7, ctx[_0x11afa7(0xc4)](this[_0x11afa7(0xdc)], this['x'], this['y'])) : (ctx[_0x11afa7(0xde)] = _0x4a3ce7, ctx[_0x11afa7(0xe8)](this['x'], this['y'], this['width'], this[_0x11afa7(0xbc)])); }, this['newPos'] = function () { var _0x379f86 = _0x1e43d7; this[_0x379f86(0xe3)] += this[_0x379f86(0xc0)], this['x'] += this[_0x379f86(0xc8)], this['y'] += this[_0x379f86(0xd9)] + this[_0x379f86(0xe3)], this[_0x379f86(0xc6)](); }, this[_0x1e43d7(0xc6)] = function () { var _0x249e35 = _0x1e43d7, _0x389a25 = myGameArea[_0x249e35(0xca)]['height'] - this['height']; this['y'] > _0x389a25 && (this['y'] = _0x389a25, this[_0x249e35(0xe3)] = 0x0); }, this['crashWith'] = function (_0x5c4d9c) { var _0x38fbfd = _0x1e43d7, _0x18f30a = this['x'], _0x52eb54 = this['x'] + this[_0x38fbfd(0xea)], _0x1e9d23 = this['y'], _0x9bd905 = this['y'] + this[_0x38fbfd(0xbc)], _0x471b8e = _0x5c4d9c['x'], _0x2ed39c = _0x5c4d9c['x'] + _0x5c4d9c['width'], _0x67a1db = _0x5c4d9c['y'], _0x5c21f9 = _0x5c4d9c['y'] + _0x5c4d9c[_0x38fbfd(0xbc)], _0x51cfcb = !![]; return (_0x9bd905 < _0x67a1db || _0x1e9d23 > _0x5c21f9 || _0x52eb54 < _0x471b8e || _0x18f30a > _0x2ed39c) && (_0x51cfcb = ![]), _0x51cfcb; }; } function updateGameArea() { var _0xb070da = _0x5b8dd4, _0x159024, _0x34b116, _0x4fb6c1, _0x3f868e, _0x8839f9, _0x186d6f, _0x224eb2; for (i = 0x0; i < myObstacles['length']; i += 0x1) { if (myGamePiece[_0xb070da(0xd2)](myObstacles[i])) return; } myGameArea['clear'](), myGameArea[_0xb070da(0xcd)] += 0x1; (myGameArea[_0xb070da(0xcd)] == 0x1 || everyinterval(0x96)) && (_0x159024 = myGameArea[_0xb070da(0xca)]['width'], _0x3f868e = 0x14, _0x8839f9 = 0xc8, _0x34b116 = Math[_0xb070da(0xc5)](Math[_0xb070da(0xe7)]() * (_0x8839f9 - _0x3f868e + 0x1) + _0x3f868e), _0x186d6f = 0x32, _0x224eb2 = 0xc8, _0x4fb6c1 = Math['floor'](Math[_0xb070da(0xe7)]() * (_0x224eb2 - _0x186d6f + 0x1) + _0x186d6f), myObstacles[_0xb070da(0xcc)](new component(0xa, _0x34b116, _0xb070da(0xe9), _0x159024, 0x0)), myObstacles[_0xb070da(0xcc)](new component(0xa, _0x159024 - _0x34b116 - _0x4fb6c1, _0xb070da(0xe9), _0x159024, _0x34b116 + _0x4fb6c1))); for (i = 0x0; i < myObstacles[_0xb070da(0xe0)]; i += 0x1) { myObstacles[i]['x'] += -0x1, myObstacles[i][_0xb070da(0xd7)](); } myScore[_0xb070da(0xdc)] = 'SCORE:\x20' + myGameArea['frameNo'], myGameArea[_0xb070da(0xcd)] > 0x3ea && localStorage[_0xb070da(0xbd)]('flaggg', 'GAME_ON'), myScore[_0xb070da(0xd7)](), myGamePiece[_0xb070da(0xe1)](), myGamePiece[_0xb070da(0xd7)](); } function everyinterval(_0x13b89e) { var _0x35e7f2 = _0x5b8dd4; if (myGameArea[_0x35e7f2(0xcd)] / _0x13b89e % 0x1 == 0x0) return !![]; return ![]; } function accelerate(_0x5eb34f) { var _0x2f2e21 = _0x5b8dd4; myGamePiece[_0x2f2e21(0xc0)] = _0x5eb34f; } function _0x19dd() { var _0x3b8362 = ['gravitySpeed', '12rHvIly', '30ovnLrU', 'createElement', 'random', 'fillRect', 'green', 'width', 'height', 'setItem', 'body', '3991630QdxQNs', 'gravity', '9cvassm', 'font', '549327zyXncs', 'fillText', 'floor', 'hitBottom', 'type', 'speedX', '36ytPtuY', 'canvas', '26802nhOajR', 'push', 'frameNo', '8TdrWjI', 'score', '6331963fDhrXt', 'childNodes', 'crashWith', '34ebwFqZ', 'clearRect', 'insertBefore', '602755LdjblG', 'update', '30px', 'speedY', 'context', 'interval', 'text', '3780385qUHjwX', 'fillStyle', '2318264ErIslH', 'length', 'newPos', 'red']; _0x19dd = function () { return _0x3b8362; }; return _0x19dd(); }
+
+    </script>
+    <br>
+    <br>
+    <br>
+    <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
+    <br>
+    <p class="text">Use the ACCELERATE button to stay in the air</p>
+    <p class="text">Avoid hitting the green walls or any other side expect the bottom one</p>
+
+    <p class="text">How long can you stay alive?
+        Score more than 1010 for a surprise
+    </p>
+    <p class="text">Refersh the page to try again</p>
+
+
+</body>
+
+</html>
